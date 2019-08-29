@@ -1,0 +1,32 @@
+import personas.*//el asterisco llama a todos los objetos dentro de personas
+//import personas.rosa
+import objetos.*
+test "test rosa" {
+	
+	//el que no le gusta
+	assert.notThat(rosa.leGusta(biblioteca))
+	placa.peso(3500)
+	assert.notThat(rosa.leGusta(placa))
+
+	//el que le gusta
+	assert.that(rosa.leGusta(pelota))
+	assert.that(rosa.leGusta(remera))
+	munieco.peso(1800)
+	assert.that(rosa.leGusta(munieco))
+}
+
+
+
+test "test juan" {
+	
+	//el que no le gusta
+	assert.notThat(juan.leGusta(biblioteca))
+	assert.notThat(juan.leGusta(remera))
+	
+	//el que le gusta
+	assert.that(juan.leGusta(pelota))
+	assert.that(juan.leGusta(munieco))
+	placa.peso(1500)
+	placa.color(pardo)
+	assert.that(juan.leGusta(placa))
+}
